@@ -5,11 +5,107 @@
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #c1b5ad;
+  background: #fffc00; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffffff, #fffc00); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    #fffc00
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.container {
+  max-width: 1200px;
+}
+
+h1 {
+  margin-left: 2%;
+
+  margin-bottom: 5px !important;
+}
+
+hr {
+  padding: 0;
+  -webkit-box-shadow: 0px 1px 1px #ada996;
+  -moz-box-shadow: 0px 1px 1px #ada996;
+  box-shadow: 0px 1px 1px #ada996;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+/*#map {
+  height: 90vh;
+  width: 50vw;
+}*/
+
 #map {
+  height: 90vh;
+  width: 50vw;
+}
+
+#wrap {
+  width: 100vw;
+  margin: 0 auto;
+  height: 90vh;
+  background: #43c6ac; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #f8ffae, #43c6ac); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #f8ffae,
+    #43c6ac
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#left_col {
   float: left;
-  height: 100vh;
-  width: 80vw;
+  width: 50vw;
+}
+
+#left_col:before,
+#right_col:before {
+  content: '';
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+
+  z-index: 100;
+}
+
+#right_col {
+  float: right;
+  width: 50vw;
+  height: 90vh;
+  background: #cac531;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #f3f9a7, #cac531);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #f3f9a7, #cac531);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#options {
+  width: 50vw;
+  height: 50%;
+}
+
+section {
+  -webkit-box-shadow: 0px 1px 1px #ada996 !important;
+  -moz-box-shadow: 0px 1px 1px #ada996 !important;
+  box-shadow: 0px 1px 1px #ada996 !important;
+  padding-left: 5%;
+}
+
+select {
+  width: 95%;
+}
+
+#itinerary {
+  width: 50vw;
+  height: 50%;
 }
